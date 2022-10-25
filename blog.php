@@ -1,12 +1,19 @@
 <?php
-
 session_start();
-var_dump($_SESSION['user']);
-var_dump($_SESSION['rol']);
-
 if(!isset($_SESSION['user'])){
     
     header("Location: V_login.php");
+}
+$user=($_SESSION['user']);
+$mysqli = new mysqli("localhost", "root", "", "blog");
+if ($mysqli->connect_errno) {
+    echo "Falló la conexión a MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
+}
+$resultado2= $mysqli->query("select rol from users where username ='" .$user . "'");
+
+
+while ($row = $resultado2->fetch_assoc()) {
+    $compara=$row['rol'];
 }
 
 ?>
@@ -21,8 +28,10 @@ if(!isset($_SESSION['user'])){
 <body>
     <h1>dashboard</h1>
     <h3>Bienvenido <?=$_SESSION['user']?></h3>
-    <?php if(isset($_SESSION['rol'])==1){
+    <?php if($compara=="1"){
         echo "<h3>Editor</h3>";
+    }elseif($compara=="2"){
+        echo "<h3>Admin</h3>";
     };
         ?>
     <br><br><br>
