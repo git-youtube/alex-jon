@@ -1,14 +1,9 @@
 <?php
 
 session_start();
-var_dump($_SESSION['user']);
-var_dump($_SESSION['rol']);
-
 if(!isset($_SESSION['user'])){
-    
     header("Location: V_login.php");
 }
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -21,10 +16,6 @@ if(!isset($_SESSION['user'])){
 <body>
     <h1>dashboard</h1>
     <h3>Bienvenido <?=$_SESSION['user']?></h3>
-    <?php if(isset($_SESSION['rol'])==1){
-        echo "<h3>Editor</h3>";
-    };
-        ?>
     <br><br><br>
     <a href="logout.php">logout</a>
 </body>
