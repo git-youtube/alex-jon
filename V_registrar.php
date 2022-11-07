@@ -1,5 +1,3 @@
-<?php
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -231,32 +229,38 @@ p {
 
         <div class="grid">
       
-          <form action="login.php" method="GET" class="form login">
+          <form action="create.php" method="GET" class="form login">
+          
+             <div class="form__field">
+                </svg><span class="hidden">Nombre</span></label>
+              <input autocomplete="nombre" id="login__nombre" type="text" name="nombre" class="form__input" placeholder="Nombre" required>
+            </div>
+            
+              <div class="form__field">
+                </svg><span class="hidden">Apellido</span></label>
+              <input autocomplete="apellido" id="login__apellido" type="text" name="apellido" class="form__input" placeholder="Apellido" required>
+            </div>
       
             <div class="form__field">
-              <label for="login__username"><svg class="icon">
-                  <use xlink:href="#icon-user"></use>
                 </svg><span class="hidden">Username</span></label>
               <input autocomplete="username" id="login__username" type="text" name="username" class="form__input" placeholder="Username" required>
             </div>
       
             <div class="form__field">
-              <label for="login__password"><svg class="icon">
-                  <use xlink:href="#icon-lock"></use>
                 </svg><span class="hidden">Password</span></label>
               <input id="login__password" type="password" name="password" class="form__input" placeholder="Password" required>
             </div>
             
-            
-      
             <div class="form__field">
-              <input type="submit" value="Sign In">
+                </svg><span class="hidden">Email</span></label>
+              <input autocomplete="email" id="login__email" type="text" name="email" class="form__input" placeholder="Email" required>
+            </div>
+
+            <div class="form__field">
+              <input type="submit" value="Create account">
             </div>
       
           </form>
-      
-          <p class="text--center">Not a member? <a href="V_registrar.php">Sign up now</a> <svg class="icon">
-              <use xlink:href="#icon-arrow-right"></use>
             </svg></p>
       
         </div>
