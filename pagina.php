@@ -35,32 +35,34 @@ while ($row = $resultado2->fetch_assoc()) {
     <link rel="stylesheet" href="pagina.css">
 
     <style>
-    
-    </style>
+<?php include 'pagina.css'; ?>
+</style>
 </head>
 <body>
-    <nav class="nav">
-        <ul>
-            <li><a href="#"> Inicio</a></li>
-            <li><a href="posts.php">Post</a> </li>
-            <h3>Bienvenido</h3>
-    <?php 
+    <nav class="nav">    
+            <a href="#"> Inicio</a>
+            <a href="posts.php">Post</a> 
+            <a href="#">Informacion</a>
+            <a href="V_FormGet.php">Pene</a> 
+            
+            <?php 
+                     if($compara=="1"){
+                      echo '<a href="V_gestionPost.php"> Editar Posts</a>';
+                     }elseif($compara=="2"){
+                      echo '<a href="V_gestionPost.php"> Editar</a>';
+                      echo '<a href="gestionUsuarios.php">Gestionar</a>';
+                     }
+                     
+                     
     if($compara!=null){
-        echo $_SESSION['user'];
-    if($compara=="1"){
-        echo "<h3>Editor</h3>";
-    }elseif($compara=="2"){
-        echo "<h3>Admin</h3>";
-    }
-    
     echo '<a class="boton" href="logout.php"> Logout</a>';
     }else{
         echo '<a class="boton" href="V_login.php"> Login</a>';
     };
         ?>
-          
-        </ul>
-    </nav>
+            
+            <div class="animation start-home"></div>
+                 </nav>
  
     <div >
         
