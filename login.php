@@ -27,7 +27,7 @@ if ($pass==$contra){
    $stmt->execute();
    $mysqli->close();
    
-    header("Location: pagina.php");
+    header("Location: posts.php");
     
 //Si la contraseña no coincide volvera al login
 }else{

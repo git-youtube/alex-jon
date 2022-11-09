@@ -7,11 +7,12 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="C_insertGET.php" method="GET">
-     <input id="ficheros" type="file" name="file" id="file" accept=".jpg,.gif,.png">
-        <input type="text" name="Nombre" placeholder="Nombre">
-       <input type="text" name="Titulo" placeholder="Titulo">
-       <textarea name="Contenido" placeholder="Contenido"></textarea>
+    <form action="C_insertPosts.php" method="GET">
+        <input type="text" name="title" placeholder="title" required>
+       <input type="text" name="brief" placeholder="brief" required>
+       <textarea name="content" placeholder="content"></textarea>
+       <input type="text" name="image" placeholder="image" required>
+       <input type="number" name="status" placeholder="status">
         <input type="submit" value="Guardar">
     </form>
 </body>

@@ -17,4 +17,6 @@ $stmt = $mysqli->prepare("UPDATE users SET username=?, password=?,email=?,rol=? 
 $stmt->bind_param('sssii',$user,$pass,$email,$rol,$id);
 $stmt->execute();
 $mysqli->close();
+
+header("location: pagina.php");
 ?>

@@ -8,8 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        @use postcss-preset-env {
-  stage: 0;
+  @use postcss-preset-env {
+    stage: 0;
 }
 
 /* config.css */
